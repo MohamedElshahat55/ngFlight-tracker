@@ -9,8 +9,9 @@ export default [
       {
         path: '',
         loadComponent: () => import('./sign-in.component'),
-        canMatch: [nonAuthGuard()],
+        // canMatch: [nonAuthGuard()],
       },
     ],
   },
-] as unknown as Routes;
+] as Routes;
+
