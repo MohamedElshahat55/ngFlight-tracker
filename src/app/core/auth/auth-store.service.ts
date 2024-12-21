@@ -27,6 +27,10 @@ export class AuthStoreService {
     storageSync:true
   });
 
+  test = injectLocalStorage('test', {
+    storageSync: true,
+  });
+
   isAuthenticated = computed(() => !!this.token);
 
   tokenDecoded = computed(() => {

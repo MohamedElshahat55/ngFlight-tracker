@@ -23,6 +23,7 @@ import { MatIcon } from '@angular/material/icon';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import {AuthService} from '../../core/auth/auth.service';
 import {AuthPayload} from '../../core/auth/authpayload';
+import {AuthStoreService} from '../../core/auth/auth-store.service';
 
 
 @Component({
@@ -108,7 +109,7 @@ import {AuthPayload} from '../../core/auth/authpayload';
 })
 export default class SignInComponent {
   fb = inject(FormBuilder);
-  authState = inject(AuthService);
+  authState = inject(AuthStoreService);
 
   hide = signal(true);
   errorMessage = signal<string | null>(null);
