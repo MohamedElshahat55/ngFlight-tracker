@@ -1,4 +1,5 @@
 import { Routes } from '@angular/router';
+import {authGuard} from './core/auth/auth.guard';
 
 export const routes: Routes = [
   {
@@ -16,16 +17,16 @@ export const routes: Routes = [
       import('./layout/dashboard-layout.component').then(
         (m) => m.DashboardLayoutComponent,
       ),
-    // canMatch: [authGuard()],
+    canMatch: [authGuard()],
     children: [
       {
         path: '',
         loadChildren: () => import('./feature/dashboard/dashboard.routes'),
       },
-      // {
-      //   path: 'tickets',
-      //   loadChildren: () => import('./feature/tickets/tickets.routes'),
-      // },
+      {
+        path: 'tickets',
+        loadChildren: () => import('./feature/tickets/tickets.routes'),
+      },
     ],
   },
 ];

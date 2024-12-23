@@ -1,27 +1,48 @@
-# Project
+# Flight Tracker
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.10.
+## Overview
 
-## Development server
+Flight Tracker is an Angular application for managing and tracking flight tickets.
+The application supports two roles: Admin and User.
+Users can view and filter tickets,
+while Admins have additional privileges,
+including the ability to create multiple tickets 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Features
 
-## Code scaffolding
+- **Login Page**: Users can log in with roles Admin and User.
+- **User Role**:
+  - View all tickets.
+  - View dashboard
+- **Admin Role**:
+  - Same privileges as User.
+  - Create multiple tickets 
+- **Ticket Fields**:
+  - `id`
+  - `inbound`
+  - `outbound`
+  - `ticket_type`
+  - `ticket_type_id` 
+  - `price`
+  - `from_date`
+  - `to_date` or `date_range`
+  - `seat_number`
+- **Validation**:
+  - No duplicate tickets for the same inbound, outbound, from, to, and seat_number values.
+  - Price should be a positive number.
+  - From date should be before the to date.
+- **Dashboard**:
+  - **Average Price By Ticket Type**: Average price of tickets by ticket type.
+  - **Ticket Sales Over Time**: Number of tickets sold over time.
+  - **Deals**: Special deals for users.
+- **Chart**: Visualization based on ticket data.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+- **Login Page**: Authenticate as Admin or User.
+  ![sign-in.png](./screenshots/sign-in.png)
+- **View and Filter Tickets**: Users and Admins can view and filter tickets.
+  ![sign-in.png](./screenshots/tickets.png)
+- **Create Tickets**: Admins can create multiple tickets without redirection.
+  ![sign-in.png](./screenshots/create-tickets.png)
+- **Validation**: Ensure no duplicate tickets are created.
+- **Charts**: Visualize data such as revenue by ticket type, ticket sales over time, and average ticket price by ticket type.
+  ![dashboard.png](./screenshots/dashboard.png)

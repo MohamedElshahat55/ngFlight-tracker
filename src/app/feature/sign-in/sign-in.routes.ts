@@ -9,7 +9,7 @@ export default [
       {
         path: '',
         loadComponent: () => import('./sign-in.component'),
-        // canMatch: [nonAuthGuard()],
+        canMatch: [nonAuthGuard()],
       },
     ],
   },

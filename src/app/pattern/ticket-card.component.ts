@@ -7,7 +7,6 @@ import {
   MatCardSubtitle,
   MatCardTitle
 } from '@angular/material/card';
-import {DatePipe} from '@angular/common';
 import {Ticket} from '../core/tickets/ticket';
 
 @Component({
@@ -16,7 +15,6 @@ import {Ticket} from '../core/tickets/ticket';
   imports: [MatCard,
     MatCardHeader,
     MatCardContent,
-    DatePipe,
     MatCardFooter,
     MatCardSubtitle,
     MatCardTitle,],
